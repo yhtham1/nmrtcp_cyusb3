@@ -1,0 +1,45 @@
+main.o: src/main.c src/inoutdev.h src/tcp.h src/pulser.h src/etools.h \
+ src/pulgen.h src/pulbrd.h src/pulmem.h src/llong.h src/compu.h \
+ lua53/src/lua.hpp lua53/src/lua.h lua53/src/luaconf.h lua53/src/lualib.h \
+ lua53/src/lauxlib.h src/strtok_r.h src/moddv14.h
+cusb.o: src/cusb.c src/ezusb.h src/types.h
+dosmem.o: src/dosmem.cpp src/llong.h src/pulmem.h
+dummy.o: src/dummy.cpp src/pulgen.h src/pulbrd.h src/pulmem.h src/llong.h
+pulbrd.o: src/pulbrd.cpp src/pulmem.h src/llong.h src/pulbrd.h \
+ src/inoutdev.h
+pulgen.o: src/pulgen.cpp src/pulmem.h src/llong.h src/pulbrd.h \
+ src/pulgen.h src/etools.h
+strtok_r.o: src/strtok_r.cpp src/strtok_r.h
+if099.o: src/if099.c src/inoutdev.h
+tcp3.o: src/tcp3.c src/tcp.h
+etools.o: src/etools.cpp src/types.h src/etools.h
+tools.o: src/tools.c src/tools.h
+run_lua.o: src/run_lua.c lua53/src/lua.hpp lua53/src/lua.h \
+ lua53/src/luaconf.h lua53/src/lualib.h lua53/src/lauxlib.h
+compu_common.o: src/compu_common.cpp src/compu.h lua53/src/lua.hpp \
+ lua53/src/lua.h lua53/src/luaconf.h lua53/src/lualib.h \
+ lua53/src/lauxlib.h src/pulmem.h src/llong.h src/pulbrd.h src/pulgen.h \
+ src/etools.h src/pulser.h src/strtok_r.h src/moddv14.h src/inoutdev.h \
+ src/tcp.h
+compu_pulser.o: src/compu_pulser.cpp src/compu.h lua53/src/lua.hpp \
+ lua53/src/lua.h lua53/src/luaconf.h lua53/src/lualib.h \
+ lua53/src/lauxlib.h src/pulmem.h src/llong.h src/pulbrd.h src/pulgen.h \
+ src/etools.h src/pulser.h src/strtok_r.h src/moddv14.h src/inoutdev.h \
+ src/tcp.h
+compu_ad.o: src/compu_ad.cpp src/compu.h lua53/src/lua.hpp \
+ lua53/src/lua.h lua53/src/luaconf.h lua53/src/lualib.h \
+ lua53/src/lauxlib.h src/pulmem.h src/llong.h src/pulbrd.h src/pulgen.h \
+ src/etools.h src/pulser.h src/strtok_r.h src/moddv14.h src/inoutdev.h \
+ src/tcp.h
+compu_rf.o: src/compu_rf.cpp src/compu.h lua53/src/lua.hpp \
+ lua53/src/lua.h lua53/src/luaconf.h lua53/src/lualib.h \
+ lua53/src/lauxlib.h src/pulmem.h src/llong.h src/pulbrd.h src/pulgen.h \
+ src/etools.h src/pulser.h src/strtok_r.h src/moddv14.h src/inoutdev.h \
+ src/tcp.h
+main_lua.o: src/main_lua.c lua53/src/lua.hpp lua53/src/lua.h \
+ lua53/src/luaconf.h lua53/src/lualib.h lua53/src/lauxlib.h \
+ lua53/src/lprefix.h lua53/src/lua.h lua53/src/lauxlib.h \
+ lua53/src/lualib.h
+moddv14.o: src/moddv14.cpp src/moddv14.h src/inoutdev.h src/etools.h
+cusb_cyusb3.o: src/cusb_cyusb3.c cyapi/inc/CyAPI.h \
+ cyapi/inc/cyusb30_def.h cyapi/inc/cyioctl.h cyapi/inc/usb200.h

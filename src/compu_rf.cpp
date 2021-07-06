@@ -26,7 +26,7 @@ void run_lua(const char *);
 
 
 
-void sendmodu( const char *msg, int  add)
+static void sendmodu( const char *msg, int  add)
 {
 	char cmd[100], *p;
 	strcpy( cmd, msg );
@@ -39,7 +39,7 @@ void sendmodu( const char *msg, int  add)
 	}
 }
 
-void recvmodu( char *ans, int add)
+static void recvmodu( char *ans, int add)
 {
 	char *p;
 	int c, ct;
@@ -94,7 +94,9 @@ int compuRF(char *buf, int fd, char **strans)
 		}
 		Sleep(5);
 		recvmodu( tbuf, RF_IOADD );
-		ans_fd( fd, tbuf,strans );
+		if( 0 < strlen(tbuf)){	//FIX20210702
+			ans_fd( fd, tbuf,strans );
+		}
 	}
 	return stts;
 }

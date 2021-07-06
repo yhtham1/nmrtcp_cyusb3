@@ -15,7 +15,8 @@
 //20201203 fx2fw.bix, slow_dat.binファイルエラーの追加
 //20201204 freqコマンドの追加(ＨＷ無しでのダミーデバイス動作用)
 //20210401 detect pulser error, adboard error
-#define REVISION_TXT "VERSION 20210401"
+//20210702 RF_compu 返信が無いコマンド（セットするだけ）の場合は返信をしないように変更
+#define REVISION_TXT "VERSION 20210702"
 
 
 

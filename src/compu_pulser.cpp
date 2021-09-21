@@ -292,7 +292,7 @@ int compuPULSER(char *buf, PULGEN& p, int fd, char **ans)
 			uint32_t add, numdat, dmy;
 			add = 0; numdat = 1;
 			cutThreeData( arg, &add, &numdat, &dmy );
-			if(0 <= numdat && ((add+numdat) < MAX_PULMEM) ){
+			if(0 <= numdat && ((add+numdat) <= MAX_PULMEM) ){//FIX20210809
 				send_pulserdata( fd, ans, add, numdat );
 			}
 			continue;

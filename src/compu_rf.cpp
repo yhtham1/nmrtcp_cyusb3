@@ -49,7 +49,7 @@ static void recvmodu( char *ans, int add)
 
 	for(;;){
 		c = indevb( add );
-		Sleep(1);
+//		Sleep(1);
 		if( c == 0x100 ) return ;//FIX20181213
 		if( c == 0 || c == 255 ) return ;
 		*p = c;
@@ -85,18 +85,15 @@ int compuRF(char *buf, int fd, char **strans)
 		}
 		if( NULL !=(arg = checkword( stm, "ndebug", &stts ))){ debugMessages=0; continue; }
 		if( NULL !=(arg = checkword( stm, "debug", &stts ))) { debugMessages=1; continue; }
-
 		strupr( stm );
 		if( RF_IOADD ){
 			sendmodu( stm, RF_IOADD );
 		} else {
 			return -1;//error
 		}
-		Sleep(5);
+		Sleep(1);
 		recvmodu( tbuf, RF_IOADD );
-		if( 0 < strlen(tbuf)){	//FIX20210702
-			ans_fd( fd, tbuf,strans );
-		}
+		ans_fd( fd, tbuf,strans );
 	}
 	return stts;
 }

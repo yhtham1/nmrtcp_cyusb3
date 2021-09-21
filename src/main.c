@@ -16,7 +16,10 @@
 //20201204 freqコマンドの追加(ＨＷ無しでのダミーデバイス動作用)
 //20210401 detect pulser error, adboard error
 //20210702 RF_compu 返信が無いコマンド（セットするだけ）の場合は返信をしないように変更
-#define REVISION_TXT "VERSION 20210702"
+//20210809 compu_pulser.cpp readmemoryb < MAX_PULMEM を <=MAX_PULMEMに修正
+
+
+#define REVISION_TXT "VERSION 20210921"
 
 
 
